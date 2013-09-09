@@ -1,3 +1,4 @@
-#Drupal Camp Ottawa Splash Page
+DrupalCamp Ottawa Splash Page
+===============
 
-Splash page for DC Ottawa 2014
+DrupalCamp Ottawa 2014 Splash Theme
