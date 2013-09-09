@@ -1,0 +1,139 @@
+// **** Navigation scss
+
+@mixin ease{
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+
+@mixin hide-text{
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+nav{
+  ul{
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li a{
+    display: block;
+    padding: .5em 0;
+    border: 0;
+    border-top: 1px solid #333;
+    color: #f1f1f1;
+    text-decoration: none;
+    font-weight: 400;
+  &:hover{
+    text-decoration: underline;
+  }
+  }// li a
+  
+  @media only screen and (min-width: 30.0em) { //480px
+   .logo{
+     float: left;
+     display: inline-block;
+   }
+   ul{
+     float: right;
+     margin-top: -38px;
+     margin-right: 1em;
+   }
+   li{
+     display: inline-block;
+     margin-left: 1em;
+     a{
+       border: 0;
+       padding-bottom: 2px;
+       &:hover{
+         text-decoration: none;
+        border-bottom: 1px solid #666;
+       }//hover
+     }//a
+     
+   } 
+  
+  }
+
+}
+
+.fb a{
+  background: transparent url('../images/facebook.png') no-repeat center center;
+
+}
+
+.twitter a{
+    background: transparent url('../images/twitter.png') no-repeat center center;
+
+  }
+  
+.footer{
+  position: absolute;
+  bottom: 0;
+  left: 0; 
+  right: 0;
+  margin-bottom: 0;
+  overflow: auto;
+  
+    background-color: #111;
+    padding:0 1em ;
+    color: #f1f1f1;
+    ul{
+      display: inline-block;
+      float: left;
+      list-style-type: none;
+      margin: 0;
+      padding: 1em 0; 
+      li{
+        display: inline;
+        a{
+          @include hide-text;
+           display: inline-block;
+           margin: 0 .5em 0;
+           height: 25px;
+            width: 25px;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+           @include ease;
+           &:hover{
+            border-bottom: 0;
+            opacity: .6; 
+           }
+        }
+      }//li
+    }//ul
+    
+
+    
+    
+    .colophon{
+      padding: 0; 
+      margin: 3px;
+      color: #555;
+      font-size: .775em;
+      font-weight: 400;
+      padding-bottom: .5em;
+      float: right;
+      display: inline-block;
+      
+      @media only screen and (min-width: 20.0em) { //320px
+        padding-top: 1.5em;
+      }
+      a{
+        color: #555;
+        &:hover{
+          border-color: #333;
+        }
+      }
+    }
+}//footer
+
